@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="tile">
+        <div class="tile" role="button" tabindex="0" aria-expanded="false">
             <div class="tile-front">
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop" alt="Dienstleistungen">
                 <div class="tile-overlay">
@@ -30,6 +30,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const tiles = document.querySelectorAll('.tile');
+        tiles.forEach(tile => {
+            const toggle = () => {
+                const isOpen = tile.classList.toggle('open');
+                tile.setAttribute('aria-expanded', String(isOpen));
+            };
+
+            tile.addEventListener('click', toggle);
+            tile.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggle();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
