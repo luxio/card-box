@@ -42,7 +42,6 @@ body {
     transform: translateZ(0);
 }
 
-.tile:hover .tile-front,
 .tile.open .tile-front {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4), 
@@ -59,7 +58,6 @@ body {
     transform: translateZ(0) scale(1);
 }
 
-.tile:hover .tile-front img,
 .tile.open .tile-front img {
     transform: scale(1.1);
 }
@@ -82,7 +80,6 @@ body {
     will-change: background;
 }
 
-.tile:hover .tile-overlay,
 .tile.open .tile-overlay {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
 }
@@ -109,7 +106,6 @@ body {
     will-change: transform, opacity;
 }
 
-.tile:hover .tile-back,
 .tile.open .tile-back {
     transform: translateZ(0) scaleY(1);
     opacity: 1;
